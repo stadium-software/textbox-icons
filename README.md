@@ -1,11 +1,11 @@
 # Textbox Icons
 
-Leading or trailing icons in TextBoxes can be used purely for aesthetic reasons, but they can also help users understand the meaning of the field in one quick glance. Tooltips on icons can provide users with further explanations about fields. 
+Leading or trailing icons in TextBoxes can be used purely for aesthetic reasons, but they can also help users understand the meaning of a field in one quick glance. Tooltips on icons can provide users with further explanations. 
 
 # Version 
 1.0 Initial
 
-## Dependency
+## Dependencies
 1. The [Icons](https://github.com/stadium-software/icons) module must be implemented in the application
 2. The [Tooltip](https://github.com/stadium-software/tooltips) module is required if tooltips are to be shown on the TextBox icons
 
