@@ -27,6 +27,8 @@ There is no need to call these scripts as they will be called by the "TextBoxIco
    6. separatewindow (Any)
    7. position (Any)
 
+![TextBox Icon Type](images/TextBoxIconType.png)
+
 ## Global Script Setup
 1. Create a Global Script called "TextBoxIcon"
 2. Add the following inpu parameter to the script
@@ -106,7 +108,7 @@ init();
 ```
 
 ## Page Setup
-1. Drag *TextBox* control to a page
+1. Drag a *TextBox* control to a page
 2. Add a class to uniquely identify the control on this page to the control classes property (e.g. number-field)
 
 ## Page.Load Setup
@@ -114,11 +116,11 @@ init();
 2. Select the "TextBoxIcon" type in the *Item Type* property dropdown of the *List*
 3. In the *Value* property of the *List*, select *Items* in the dropdown or use the ... button to open the ListEditor
 
-![Launch List Editor](images/LaunchListEditor.png)
+![Launch List Editor](images/ListEditorLaunch.png)
 
 4. In the *ListEditor*, select *Object Properties* in the dropdown or use the ... button to open the ObjectEditor
 
-![Launch Object Editor](images/LaunchObjectEditor.png)
+![Launch Object Editor](images/ObjectEditorLaunch.png)
 
 5. Use the *Object Editor* to add your workflow steps
    1. textboxclass (string): The classname that uniquely identifies the textBox control
@@ -132,7 +134,7 @@ init();
    6. separatewindow (boolean; default is false): Set this to "true" if the link click should result in a new browser tab to be opened
    7. position (default is right): Define if the icons should be placed on the right or the left of the TextBox field (note that password fields and other field types might already have an icon on the right)
 
-![Object Editor](images/ObjectEditor.png) ![Workflow Steps Display](images/Workflow-Steps-Display.png)
+![Object Editor](images/ObjectEditor.png)
 
 6. Drag the Global Script called "TextBoxIcon" into the Page.Load EventHandler
 7. Provide value for the script input parameters
