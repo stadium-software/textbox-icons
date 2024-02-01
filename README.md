@@ -2,6 +2,8 @@
 
 Leading or trailing icons in TextBoxes can be used purely for aesthetic reasons, but they can also help users understand the meaning of a field in one quick glance. Tooltips on icons can provide users with further explanations. 
 
+https://github.com/stadium-software/textbox-icons/assets/2085324/92c3ec95-a626-4d32-8110-86eb71f5f930
+
 # Version 
 1.0 Initial
 
