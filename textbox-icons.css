@@ -1,0 +1,51 @@
+#app div[textbox-icon] {
+    display: grid;
+    position: relative;
+    grid-template-areas:
+        "textbox icon"
+        "validation validation";
+    grid-template-columns: auto;
+    grid-column-gap: 0;
+
+    & .icon-container {
+        grid-area: icon;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        width: 40px;
+        background-color: var(--textbox-icon-background-color);
+        position: absolute;
+        right: 0;
+        background-image: linear-gradient(to right, var(--textbox-icon-border-color) 0, transparent 1px);
+        background-size: 1px var(--textbox-icon-border-height);
+        background-position: left;
+        background-repeat: no-repeat;
+    }
+
+    & .validation-error {
+        grid-area: validation;
+    }
+
+    & input {
+        padding-right: 44px;
+    }
+
+    & .icon-container.left {
+        position: absolute;
+        left: 0;
+        right: auto;
+        background-position: right;
+    }
+
+    &:has(.icon-container.left) {
+        grid-template-areas:
+            "icon textbox"
+            "validation validation";
+
+        & input {
+            padding-left: 44px;
+            padding-right: inherit;
+        }
+    }
+}
