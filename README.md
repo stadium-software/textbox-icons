@@ -36,6 +36,7 @@ There is no need to call these scripts as they will be called by the "TextBoxIco
 3. Drag a *JavaScript* action into the script
 4. Add the Javascript below into the JavaScript code property
 ```javascript
+/* Stadium Script version 1.0 https://github.com/stadium-software/textbox-icons */
 let data = ~.Parameters.Input.TextBoxIcons;
 let containerClassName = "container";
 let callTooltip = async (classname, content) => {
