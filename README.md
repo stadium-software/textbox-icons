@@ -6,6 +6,7 @@ https://github.com/stadium-software/textbox-icons/assets/2085324/92c3ec95-a626-4
 
 # Version 
 1.0 Initial
+1.1 Improved Global Script calling
 
 ## Dependencies
 1. The [Icons](https://github.com/stadium-software/icons) module must be implemented in the application
@@ -36,14 +37,20 @@ There is no need to call these scripts as they will be called by the "TextBoxIco
 3. Drag a *JavaScript* action into the script
 4. Add the Javascript below into the JavaScript code property
 ```javascript
-/* Stadium Script version 1.0 https://github.com/stadium-software/textbox-icons */
+/* Stadium Script version 1.1 https://github.com/stadium-software/textbox-icons */
 let data = ~.Parameters.Input.TextBoxIcons;
 let containerClassName = "container";
 let callTooltip = async (classname, content) => {
     await this.$globalScripts().Tooltip(classname, content);
 };
+let wait = async (milliseconds) => new Promise((resolve) => setTimeout(resolve, milliseconds));
 let icons = async () => {
-    await this.$globalScripts().Icons(containerClassName);
+    try {
+        await this.$globalScripts().Icons();
+        return true;
+    } catch (error) {
+        wait(100).then(() => icons());
+    }
 };
 let initTextBoxes = () => {
     for (let i = 0; i < data.length; i++) {
@@ -101,11 +108,7 @@ let initTextBoxes = () => {
     }
     icons();
 };
-let wait = async (milliseconds) => new Promise((resolve) => setTimeout(resolve, milliseconds));
-let init = () => {
-    wait(100).then(() => initTextBoxes());
-};
-init();
+initTextBoxes();
 ```
 
 ## Page Setup
