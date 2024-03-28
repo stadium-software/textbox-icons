@@ -144,10 +144,8 @@ initTextBoxes();
 7. Provide value for the script input parameters
    1. TextBoxIcons: Select the List containing the TextBox icons (e.g. "TextBoxIconsList")
 
-# Styling
-Various elements in this module can be styled using the two CSS files in this repo
-
 ## Applying the CSS
+The CSS below is required for the correct functioning of the module. Some elements can be [customised](#customising-css) using a variables CSS file. 
 
 **Stadium 6.6 or higher**
 1. Create a folder called "CSS" inside of your Embedded Files in your application
