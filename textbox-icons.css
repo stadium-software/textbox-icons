@@ -8,31 +8,31 @@
     grid-template-columns: auto;
     grid-column-gap: 0;
 
-    & .icon-container {
+    .icon-container {
         grid-area: icon;
         display: flex;
         align-items: center;
         justify-content: center;
         height: 100%;
         width: 40px;
-        background-color: var(--textbox-icon-background-color);
+        background-color: var(--textbox-icon-background-color, transparent);
         position: absolute;
         right: 0;
-        background-image: linear-gradient(to right, var(--textbox-icon-border-color) 0, transparent 1px);
-        background-size: 1px var(--textbox-icon-border-height);
+        background-image: linear-gradient(to right, var(--textbox-icon-border-color, var(--TERIARY-THEME-COLOR)) 0, transparent 1px);
+        background-size: 1px var(--textbox-icon-border-height, 66%);
         background-position: left;
         background-repeat: no-repeat;
     }
 
-    & .validation-error {
+    .validation-error {
         grid-area: validation;
     }
 
-    & input {
+    input {
         padding-right: 44px;
     }
 
-    & .icon-container.left {
+    .icon-container.left {
         position: absolute;
         left: 0;
         right: auto;
@@ -44,7 +44,7 @@
             "icon textbox"
             "validation validation";
 
-        & input {
+        input {
             padding-left: 44px;
             padding-right: inherit;
         }
