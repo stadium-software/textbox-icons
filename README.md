@@ -1,6 +1,6 @@
 # Textbox Icons
 
-Leading or trailing icons in TextBoxes can be used purely for aesthetic reasons, but they can also help users understand the meaning of a field in one quick glance. 
+Leading or trailing icons in TextBoxes can be used purely for aesthetic reasons, but they can also help users understand the purpose of a textbox at a glance. 
 
 ![](images/view.png)
 
